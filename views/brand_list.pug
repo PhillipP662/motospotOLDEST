@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  div(class="hero-image")
+    div(class="hero-content")
+      div(class="hero-content-inner")
+        h1(class='homeTitle') MERKEN:
+
+          div
+            ul
+              each brand in brand_list
+                li(class="summaryList")
+                  a(class="summaryText" href=brand.url) #{brand.name}
+
+              else
+                li There are no brands.

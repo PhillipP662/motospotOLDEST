@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  div
+    h1 BikeType: #{biketype.name}
+
+    div
+
+      h4 Models
+      dl
+      each model in biketype_models
+        dt
+          a(href=model.url) Name: #{model.model_name}
+        dd Power: #{model.power} hp
+
+      else
+        p This biketype has no models.
+
+    hr
+    p
+      a(href=biketype.url + '/delete') Delete biketype
+    p
+      a(href=biketype.url + '/update') Update biketype

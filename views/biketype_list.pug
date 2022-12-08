@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  div
+    h1(class='homeTitle') MOTOSPOT
+
+    div
+      ul
+        each val in list_biketypes
+          li(class="bikeSummary")
+            a(href=val.url) #{val.name}
+
+        else
+          li There are no biketype.

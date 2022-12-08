@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  div
+    h1 Model Name: #{model.model_name}
+
+    p #[strong Brand: ]
+      a(href=model.brand.url) #{model.brand.name}
+    p #[strong Power:] #{model.power} hp
+    p #[strong BikeType: ]
+      each val, index in model.biketype
+        a(href=val.url) #{val.name}
+        if index < model.biketype.length - 1
+          | ,
+    iframe(width="560" height="315" src="https://www.youtube.com/embed/"+model.yt_url.split('v=')[1].split('&')[0] title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+
+
+    hr
+    p
+      a(href=model.url+'/delete') Delete Model
+    p
+      a(href=model.url+'/update') Update Model
