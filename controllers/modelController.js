@@ -312,7 +312,7 @@ exports.model_update_post = [
   },
 
   // Validate and sanitize fields.
-  body("model", "Model must not be empty.")
+  body("model_name", "Model must not be empty.")
     .trim()
     .isLength({ min: 1 })
     .escape(),

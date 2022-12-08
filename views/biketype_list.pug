@@ -1,14 +1,16 @@
 extends layout
 
 block content
-  div
-    h1(class='homeTitle') MOTOSPOT
+  div(class="hero-image")
+    div(class="hero-content")
+      div(class="hero-content-inner")
+        h1(class='homeTitle') MOTOSPOT
 
-    div
-      ul
-        each val in list_biketypes
-          li(class="bikeSummary")
-            a(href=val.url) #{val.name}
+          div
+            ul
+              each val in list_biketypes
+                li(class="linkedList")
+                  a(class="linkedText" href=val.url) #{val.name}
 
-        else
-          li There are no biketype.
+              else
+                li(class="emptyList") There are no biketype.

@@ -1,23 +1,25 @@
 extends layout
 
 block content
-  div
-    h1 BikeType: #{biketype.name}
+  div(class="hero-image")
+    div(class="hero-content")
+      div(class="hero-content-inner")
+        h1 BikeType: #{biketype.name}
 
-    div
+          div
 
-      h4 Models
-      dl
-      each model in biketype_models
-        dt
-          a(href=model.url) Name: #{model.model_name}
-        dd Power: #{model.power} hp
+            h4 Models
+            dl
+            each model in biketype_models
+              dt
+                a(class="linkedText" href=model.url) Name: #{model.model_name}
+              dd(class="linkedText") Power: #{model.power} hp
 
-      else
-        p This biketype has no models.
+            else
+              p(class="emptyList") This biketype has no models.
 
-    hr
-    p
-      a(href=biketype.url + '/delete') Delete biketype
-    p
-      a(href=biketype.url + '/update') Update biketype
+          hr
+          p(class="linkedParagraph")
+            a(class="linkedText" href=biketype.url + '/delete') Delete biketype
+          p(class="linkedParagraph")
+            a(class="linkedText" href=biketype.url + '/update') Update biketype

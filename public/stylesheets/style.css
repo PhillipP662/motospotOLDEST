@@ -39,6 +39,7 @@ label.logo{
 nav .navlist{
     float: right;
     margin-right: 20px;
+    overflow-y: scroll;
 }
 nav .navlist .navitem{
     display: inline-block;
@@ -154,10 +155,10 @@ a.active,a:hover{
 .hero-content-inner p {
     width: 75%;
     margin: 0 auto;
-    font-size: 16px;
+    /*font-size: 16px;*/
     font-weight: normal;
     color: white;
-    line-height: 22px;
+    /*line-height: 22px;*/
 }
 .hero-content-inner button {
     width: 170px;
@@ -165,10 +166,10 @@ a.active,a:hover{
     margin-top: 40px;
     border-radius: 50px;
     outline: none;
-    font-size: 15px;
+    font-size: 16px;
     text-transform: capitalize;
     background-color: #fc5f00;
-    color: white;
+    color: #000000;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
     border: 2px solid transparent;
     cursor: pointer;
@@ -234,14 +235,6 @@ a.active,a:hover{
     }
 }
 
-.summaryList {
-    margin: 10px 10px;
-    padding: 10px 10px;
-}
-.summaryText {
-    color: white;
-}
-
 /* Footer */
 footer {
     position: relative;
@@ -275,6 +268,7 @@ footer {
     font-size: 14px;
 }
 .socials {
+    width: 80vw;
     list-style: none;
     display: flex;
     align-items: center;
@@ -295,6 +289,18 @@ footer {
 .socials a:hover i {
     color: aqua;
 }
+.socialIcon {
+    padding: 10px;
+    width: 100px;
+    height: auto;
+}
+.socialIcon {
+    padding: 10px;
+    width: 100px;
+    height: auto;
+}.socialLink:hover {
+     background: none;
+ }
 .footer-bottom {
     background: black;
     width: 100vw;
@@ -308,7 +314,52 @@ footer {
 }
 .footer-bottom span {
     text-transform: uppercase;
-    opacity: 0.4;
+    opacity: 0.8;
     font-weight: 200;
 }
 
+/* New added */
+.linkedText {
+    color: white;
+    padding: 2px;
+    margin: 2px;
+    font-size: 30px;
+}
+.infoText {
+    color: white;
+    padding: 2px;
+    margin: 2px;
+    font-size: 25px;
+}
+.linkedList {
+    padding: 2px;
+    margin: 2px;
+    font-size: 30px;
+}
+.linkedParagraph {
+    color: white;
+    padding: 12px;
+    margin: 2px;
+    font-size: 30px;
+}
+iframe {
+    padding: 10px;
+}
+.emptyList {
+    padding: 12px;
+    margin: 12px;
+    font-size: 30px;
+    line-height: 30px;
+}
+.formText {
+    color: white;
+    padding: 2px;
+    margin: 2px;
+    font-size: 30px;
+}
+.selectText {
+    color: white;
+    padding: 2px;
+    margin: 2px;
+    font-size: 20px;
+}
